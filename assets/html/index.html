@@ -9,8 +9,8 @@
     <body>
         <header>
             <nav>
-                <a class="navbar-highscores" href="highscores.html">View Highscores</a>
-                <section class="navbar-timer">Time: 75 seconds</section>
+                <a href="highscores.html">View Highscores</a>
+                <section class="nav-timer">Time: 75 seconds</section>
             </nav>
         </header>
         <main>
@@ -22,24 +22,24 @@
                 </p>
                 <button id="start-button">Start Quiz</button>
             </section>
-            <section>
-                <p id="timer">Time: <span id="timer">0</span></p>
-                <h1 id="question">Quiz Question</h1>
+            <section id="quiz-questions" class="quiz-section hidden">
+                <p id="timer">Time: <span id="countdown"></span></p>
+                <h1 id="questions">Quiz Question</h1>
                 <ul id="choices"></ul>
             </section>
-            <section>
-                <h1>Quiz Completed</h1>
+            <section id="end-quiz-screen">
+                <h1>All done!</h1>
                 <p>You scored: <span id="score">0</span></p>
-                <form>
-                    <label>Enter initials:</label>
-                    <input>
-                    <button>Submit</button>
+                <form id="scoreboard-form">
+                    <label for="initials-input">Enter initials:</label>
+                    <input type="text" id="initials-input" name="initials" required>
+                    <button type="submit">Submit</button>
                 </form>
                 <a href="index.html" class="back-button">Back to quiz</a>
             </section>
             <div>
-                <p>Correct!</p>
-                <p>Wrong!</p>
+                <p id="correct" class="">Correct!</p>
+                <p id="wrong" class="">Wrong!</p>
             </div>
         </main>
         <script src="../js/questions.js"></script>
