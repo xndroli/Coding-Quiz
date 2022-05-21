@@ -117,7 +117,7 @@ function displayQuestion() {
   if (currentQuestionIndex < questions.length) {
     console.log('display question please');
     var currentQuestion = questions[currentQuestionIndex];
-    questionTextElement.textcontent = currentQuestion.question;
+    questionTextElement.textContent = currentQuestion.question;
 
     var choices = currentQuestion.choices;
     questionChoicesElement.innerHTML = '';
