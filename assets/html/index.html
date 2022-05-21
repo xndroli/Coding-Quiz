@@ -10,25 +10,25 @@
         <header>
             <nav>
                 <a href="highscores.html">View Highscores</a>
-                <section class="nav-timer">Time: 75 seconds</section>
+                <p>Time: <span id="time-display"></span></p>
             </nav>
         </header>
         <main>
-            <section>
+            <section id="start-quiz-screen">
                 <h1>Coding Quiz Challenge</h1>
                 <p>
                     Try to answer the following code-related questions within the time limit. <br>
                     Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! 
                 </p>
-                <button id="start-button">Start Quiz</button>
+                <button id="start-quiz-button">Start Quiz</button>
             </section>
-            <section id="quiz-questions" class="quiz-section hidden">
-                <p id="timer">Time: <span id="countdown"></span></p>
-                <h1 id="questions">Quiz Question</h1>
-                <ul id="choices"></ul>
+            <section id="quiz-questions-screen" class="hidden">
+                <h2 id="question-text">Quiz Question</h2>
+                <ul id="question-choices"></ul>
+                <p id="results"></p>
             </section>
-            <section id="end-quiz-screen">
-                <h1>All done!</h1>
+            <section id="end-quiz-screen" class="hidden">
+                <h2>All done!</h2>
                 <p>You scored: <span id="score">0</span></p>
                 <form id="scoreboard-form">
                     <label for="initials-input">Enter initials:</label>
@@ -37,10 +37,6 @@
                 </form>
                 <a href="index.html" class="back-button">Back to quiz</a>
             </section>
-            <div>
-                <p id="correct" class="">Correct!</p>
-                <p id="wrong" class="">Wrong!</p>
-            </div>
         </main>
         <script src="../js/questions.js"></script>
     </body>
