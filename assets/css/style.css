@@ -10,29 +10,39 @@ body {
     flex-direction: column;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
 a {
-    color: ;
+    color: slateblue;
+    text-decoration: none;
+}
+
+a.back-button {
+    color: orangeRed;
+    border-radius: 4px;
 }
 
 a:hover {
-    color: ;
+    color: dodgerBlue;
 }
 
 button {
+    color: orangeRed;
     border-radius: 4px;
 }
 
 button:hover {
-    color: ;
-}
-
-nav {
-    padding: 15px;
+    color: orange;
 }
 
 main {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    text-align: center;
 }
 
