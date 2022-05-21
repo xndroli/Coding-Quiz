@@ -47,7 +47,7 @@ if (scoresFromLocalStorage) {
 }
 
 var questionTextElement =  document.querySelector('#question-text');
-var questionChoicesElement = document.querySelector('#questions-choices');
+var questionChoicesElement = document.querySelector('#question-choices');
 var resultsPElement = document.querySelector('#results');
 var timeDisplayElement = document.querySelector('#time-display');
 // Buttons
