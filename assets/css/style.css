@@ -16,6 +16,7 @@ body {
 
 nav {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 15px;
 }
@@ -53,4 +54,3 @@ main {
     box-sizing: border-box;
     text-align: center;
 }
-
