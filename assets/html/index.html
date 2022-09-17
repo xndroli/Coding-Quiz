@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Code Quiz</title>
-        <link rel="stylesheet" href="../css/style.css" />
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="highscores.html" class="scoreboard-button">View high scores</a>
-                <p>Time: <span id="time-display"></span></p>
-            </nav>
-        </header>
-        <main>
-            <section id="start-quiz-screen">
-                <h1>Coding Quiz Challenge</h1>
-                <p>
-                    Try to answer the following code-related questions within the time limit. <br>
-                    Keep in mind that incorrect answers will penalize your score/time <br> by ten seconds! 
-                </p>
-                <button id="start-quiz-button">Start Quiz</button>
-            </section>
-            <section id="quiz-questions-screen" class="hidden">
-                <h2 id="question-text"></h2>
-                <ul id="question-choices"></ul>
-                <p id="results"></p>
-            </section>
-            <section id="end-quiz-screen" class="hidden">
-                <h2>All done!</h2>
-                <p>You scored: <span id="time-display"></span></p>
-                <form id="scoreboard-form">
-                    <label for="initials-input">Enter initials:</label>
-                    <input type="text" id="initials-input" name="initials" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </main>
-        <script src="../js/questions.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Code Quiz</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="highscores.html" class="scoreboard-button">View high scores</a>
+				<p>Time: <span id="time-display"></span></p>
+			</nav>
+		</header>
+		<main>
+			<section id="start-quiz-screen">
+				<h1>Coding Quiz Challenge</h1>
+				<p>
+					Try to answer the following code-related questions within the time
+					limit. <br />
+					Keep in mind that incorrect answers will penalize your score/time
+					<br />
+					by ten seconds!
+				</p>
+				<button id="start-quiz-button">Start Quiz</button>
+			</section>
+			<section id="quiz-questions-screen" class="hidden">
+				<h2 id="question-text"></h2>
+				<ul id="question-choices"></ul>
+				<p id="results"></p>
+			</section>
+			<section id="end-quiz-screen" class="hidden">
+				<h2>All done!</h2>
+				<p>You scored: <span id="score-display"></span></p>
+				<form id="scoreboard-form">
+					<label for="initials-input">Enter initials:</label>
+					<input type="text" id="initials-input" name="initials" required />
+					<button type="submit">Submit</button>
+				</form>
+			</section>
+		</main>
+		<script src="../js/questions.js"></script>
+	</body>
 </html>

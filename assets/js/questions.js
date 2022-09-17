@@ -49,21 +49,21 @@ var questions = [
 	},
 ];
 
-var highscores;
-var scoresFromLocalStorage = localStorage.getItem('highscores');
+// var scoresFromLocalStorage = localStorage.getItem('highscores');
 
-console.log('scores from local', scoresFromLocalStorage);
+// console.log('scores from local', scoresFromLocalStorage);
 
-if (scoresFromLocalStorage) {
-	highscores = JSON.parse(scoresFromLocalStorage);
-} else {
-	highscores = [];
-}
+// if (scoresFromLocalStorage) {
+// 	highscores = JSON.parse(scoresFromLocalStorage);
+// } else {
+// 	highscores = [];
+// }
 
 var questionTextElement = document.querySelector('#question-text');
 var questionChoicesElement = document.querySelector('#question-choices');
 var resultsPElement = document.querySelector('#results');
 var timeDisplayElement = document.querySelector('#time-display');
+var scoreDisplayElement = document.querySelector('#score-display');
 // Buttons
 var startQuizButtonElement = document.querySelector('#start-quiz-button');
 // Screens
@@ -77,16 +77,19 @@ var initialsInputElement = document.querySelector('#initials-input');
 scoreboardFormElement.addEventListener('submit', function (event) {
 	event.preventDefault();
 	// Grab the text that was typed into input
+
 	// Create an object with initials and current score (timer)
 	var userScore = {
 		initals: initialsInputElement.value,
 		score: timer,
 	};
 	console.log(userScore);
+
+	highscores = JSON.parse(localStorage.getItem('scores')) || [];
 	highscores.push(userScore);
 
 	// Put that object into localStorage
-	localStorage.setItem('highscores', JSON.stringify(userScore));
+	localStorage.setItem('scores', JSON.stringify(userScore));
 
 	// Clear the input
 	initialsInputElement.value = '';
@@ -132,6 +135,7 @@ function displayQuestion() {
 
 		var choices = currentQuestion.choices;
 		questionChoicesElement.innerHTML = '';
+		document.createElement('ul').innerHTML = '';
 
 		for (var i = 0; i < choices.length; i++) {
 			var button = document.createElement('button');
@@ -161,9 +165,12 @@ function startTimer() {
 }
 
 function endQuiz() {
+	console.log('end quiz');
 	clearInterval(timeInterval);
 	quizQuestionsScreen.classList.add('hidden');
 	endQuizScreen.classList.remove('hidden');
+	timeDisplayElement.textContent = "Time's Up!";
+	scoreDisplayElement.textContent = timer;
 }
 
 function startQuiz() {
